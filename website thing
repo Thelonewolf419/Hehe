@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<p>Number of visitors: <span id="visitorCount">0</span></p>
+	<script>
+		var visitorCount = parseInt(localStorage.getItem("visitorCount")) || 0; // Get the visitor count from local storage, or default to 0
+		visitorCount++; // Increment the visitor count
+		document.getElementById("visitorCount").textContent = visitorCount; // Update the HTML element with the new visitor count
+		localStorage.setItem("visitorCount", visitorCount); // Save the new visitor count to local storage
+	</script>
+</body>
+</html>
